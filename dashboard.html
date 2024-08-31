@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hatun Textile Company</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Welcome to the Dashboard</h1>
+        <div class="button-group">
+            <button onclick="navigateTo('socialMedia.html')">Social Media</button>
+            <button onclick="navigateTo('accounting.html')">Accounting</button>
+            <button onclick="navigateTo('onlineSales.html')">Online Sales and Shipping</button>
+            <button onclick="navigateTo('salesHall.html')">Sales Hall</button>
+            <!-- Add a button to navigate to the reports page -->
+            <button onclick="navigateTo('reports.html')">Generate Reports</button>
+        </div>
+    </div>
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

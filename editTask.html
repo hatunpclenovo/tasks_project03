@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="employee-container">
+        <h1>Edit Task</h1>
+        <div id="taskFormContainer">
+            <form id="editTaskForm" onsubmit="updateTask(event)">
+                <label for="taskDay">Day:</label>
+                <select id="taskDay" name="taskDay" required>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+                
+                <label for="taskDate">Date:</label>
+                <input type="date" id="taskDate" name="taskDate" required>
+                
+                <label for="taskDepartment">The department that requested the task:</label>
+                <select id="taskDepartment" name="taskDepartment" required>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Accounting">Accounting</option>
+                    <option value="Online Sales Shipping">Online Sales Shipping</option>
+                    <option value="Sales Hall">Sales Hall</option>
+                </select>
+                
+                <label for="taskTitle">Task Title:</label>
+                <input type="text" id="taskTitle" name="taskTitle" required>
+                
+                <label for="taskDescription">Task Description:</label>
+                <textarea id="taskDescription" name="taskDescription" required></textarea>
+                
+                <label for="taskStartTime">Start Time:</label>
+                <input type="time" id="taskStartTime" name="taskStartTime" required>
+                
+                <label for="taskEndTime">End Time:</label>
+                <input type="time" id="taskEndTime" name="taskEndTime" required>
+                
+                <label for="taskNote">Note:</label>
+                <textarea id="taskNote" name="taskNote"></textarea>
+                
+                <button type="submit">Update Task</button>
+            </form>
+        </div>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', loadTaskDetails);
+    </script>
+</body>
+</html>

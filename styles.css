@@ -1,0 +1,509 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Login container styles */
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 40px;
+    background: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.login-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Typography */
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #007BFF;
+}
+
+/* Button styles */
+button {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Dashboard container styles */
+.dashboard-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.button-group button {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Reports container styles */
+.reports-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.reports-container h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.reports-container form {
+    margin-bottom: 30px;
+}
+
+.reports-container label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.reports-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.reports-container button {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.reports-container button:hover {
+    background-color: #0056b3;
+}
+
+.report-result {
+    margin-top: 30px;
+    text-align: left;
+}
+
+/* Employee container styles */
+.employee-container {
+    max-width: 1200px; /* Full width on large screens */
+    width: 100%;
+    margin: 20px auto;
+    padding: 40px;
+    background: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    position: relative; /* Ensure relative positioning for button container */
+    padding-top: 70px; /* Space for the top-right buttons */
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+}
+
+.employee-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Task list and table styles */
+#employeeList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#employeeList li {
+    background: #e0e0e0;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+#employeeList li:hover {
+    background-color: #d0d0d0;
+}
+
+.task-counters {
+    display: flex;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+.task-counters span {
+    background: #ddd;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Ensure consistent table widths and prevent text overlap */
+table {
+    width: 100%;
+    table-layout: auto; /* Allow columns to adjust based on content */
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+table:hover {
+    transform: scale(1.02);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px; /* Match text size to button size */
+    vertical-align: top; /* Align text to the top of the cell */
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Action button styles */
+button.table-action {
+    padding: 5px 10px;
+    font-size: 16px; /* Ensure buttons and table text have matching sizes */
+    cursor: pointer;
+    margin: 0 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+button.table-action:hover {
+    background-color: #0056b3;
+}
+
+/* Matching complete and uncomplete buttons */
+button.mark-complete {
+    background-color: #28a745;
+    font-size: 16px; /* Matching text size */
+}
+
+button.mark-complete:hover {
+    background-color: #218838;
+}
+
+button.mark-uncomplete {
+    background-color: #dc3545;
+    font-size: 16px; /* Matching text size */
+}
+
+button.mark-uncomplete:hover {
+    background-color: #c82333;
+}
+
+/* Button Container for the top right alignment */
+.button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Responsive Design */
+
+/* Tablet Screens */
+@media screen and (max-width: 1024px) {
+    .employee-container {
+        max-width: 900px; /* Reduce width for tablets */
+        padding: 30px;
+        overflow-x: auto; /* Allow horizontal scrolling */
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    .task-counters span {
+        padding: 5px 8px;
+    }
+}
+
+/* Mobile Screens */
+@media screen and (max-width: 768px) {
+    .employee-container {
+        max-width: 700px; /* Further reduce width for mobile devices */
+        padding: 20px;
+        overflow-x: auto; /* Allow horizontal scrolling */
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .task-counters {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Small Mobile Screens */
+@media screen and (max-width: 480px) {
+    .employee-container {
+        max-width: 100%; /* Full width on small screens */
+        padding: 15px;
+        overflow-x: auto; /* Allow horizontal scrolling */
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input, textarea, select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .task-counters span {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+
+    th, td {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    table {
+        min-width: 600px; /* Set a minimum width for the table */
+    }
+}
+
+.employee-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.employee-actions button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.employee-actions button:nth-child(1) {
+    background-color: #007BFF;
+    color: white;
+}
+
+.employee-actions button:nth-child(2) {
+    background-color: #dc3545;
+    color: white;
+}
+
+.employee-actions button:hover {
+    background-color: #0056b3;
+}
+
+#addEmployeeButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#employeeNameInput {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#saveEmployeeButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

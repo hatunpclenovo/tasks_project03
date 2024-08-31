@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="employee-container">
+        <button id="addEmployeeButton">Add Employee</button>
+        <h1>Accounting Section</h1>
+        <ul id="employeeList">
+            <!-- Employee names with action buttons will be added here by JavaScript -->
+        </ul>
+    </div>
+
+    <!-- Add Employee Modal -->
+    <div id="addEmployeeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Employee</h2>
+            <input type="text" id="employeeNameInput" placeholder="Enter employee name">
+            <button id="saveEmployeeButton">Save</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', loadEmployees);
+    </script>
+</body>
+</html>

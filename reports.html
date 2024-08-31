@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Hatun Textile Company</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="reports-container">
+        <h1>Report Creation Section</h1>
+        <form id="reportForm">
+            <label for="reportType">Select Report Type:</label>
+            <select id="reportType" required>
+                <option value="mostCompleted">Employee with Most Completed Tasks</option>
+                <option value="mostUncompleted">Employee with Most Uncompleted Tasks</option>
+                <option value="completedPercentage">Percentage of Tasks Completed</option>
+                <option value="unfinishedPercentage">Percentage of Unfinished Tasks</option>
+            </select>
+            <button type="submit">Generate Report</button>
+        </form>
+
+        <div id="reportResult" class="report-result">
+            <!-- Report results will be displayed here -->
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
